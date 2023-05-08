@@ -1,5 +1,7 @@
-/*
-    libfast for KallistiOS ##version##   
+/**
+    libfast for KallistiOS ##version##
+
+    Very optimized set of functions for the Sega Dreamcast
 */
 
 #ifndef __FAST_FAST_H
