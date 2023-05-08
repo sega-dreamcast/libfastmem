@@ -24,7 +24,7 @@
 #define	MEMCPY_USES_FPU
 /* Use paired single precision load or store mode for 64-bit tranfering.
  * FPSCR.SZ=1,FPSCR.SZ=0 is well defined on both SH4-200 and SH4-300.
- * Currenlty it has been only implemented and tested for little endian mode. */
+ * Currently it has been only implemented and tested for little endian mode. */
 .macro FPU_SET_PAIRED_PREC
 	sts	fpscr, r7
 	mov	#0x10, r0	! PR=0 SZ=1
