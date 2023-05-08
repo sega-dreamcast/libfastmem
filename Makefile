@@ -2,6 +2,7 @@
 #
 # Makefile
 
+
 TARGET = libfast.a
 OBJS = memcpy_fast.o memset_fast.o
 
@@ -13,3 +14,8 @@ include $(KOS_BASE)/addons/Makefile.prefab
 create_kos_link:
 	rm -f ../include/fast
 	ln -s ../libfast/include ../include/fast
+	
+# Override the default %.S rule from "Makefile.rules" (we want "kos-cc" instead
+# of "kos-as").
+%.o: %.S
+	kos-cc $< -o $@
