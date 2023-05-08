@@ -61,6 +61,7 @@ and the bytes are then copied from the temporary array to `dst`.
 ### memset_fast
 
 Copyright (C) 1999  Niibe Yutaka
+ 
 Copyright (c) 2009  STMicroelectronics Ltd
 * Optimised using 64bit data transfer (via FPU) and the movca.l inst.
 * Author: Giuseppe Cavallaro <peppe.cavallaro@st.com>
@@ -68,9 +69,11 @@ Copyright (c) 2009  STMicroelectronics Ltd
 ### memcpy_fast
 
 Copyright (C) 1999  Niibe Yutaka
+
 Copyright (c) 2002  STMicroelectronics Ltd
 * Modified from memcpy.S and micro-optimised for SH4
-* Stuart Menefy (stuart.menefy@st.com)
+* Author: Stuart Menefy <stuart.menefy@st.com>
+
 Copyright (c) 2009  STMicroelectronics Ltd
 * Optimised using prefetching and 64bit data transfer via FPU
 * Author: Giuseppe Cavallaro <peppe.cavallaro@st.com>
@@ -78,3 +81,10 @@ Copyright (c) 2009  STMicroelectronics Ltd
 ### memmove_fast
 
 Copyright (C) 1999  Niibe Yutaka
+
+## About
+
+These functions were intended to be directly merged in KallistiOS patches but
+unfortunately, this couldn't be done due to licensing issue. These functions
+remain very interesting for Sega Dreamcast programming, that's why these were
+published in that library.
