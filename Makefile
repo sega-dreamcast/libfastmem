@@ -4,7 +4,7 @@
 
 
 TARGET = libfast.a
-OBJS = memcpy_fast.o memset_fast.o
+OBJS = memcpy_fast.o memset_fast.o memmove_fast.o
 
 defaultall: create_kos_link $(OBJS) subdirs linklib
 

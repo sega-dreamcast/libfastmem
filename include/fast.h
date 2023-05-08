@@ -39,6 +39,19 @@ void *memset_fast(void *s, int c, size_t n);
  */
 void *memcpy_fast(void *dst, const void *src, size_t n);
 
+
+/**
+ * memmove_fast: copy memory area (optimized version for SuperH)
+ * 
+ * This function copies n bytes from memory area src to memory area dst.
+ * The memory areas may overlap: copying takes place as though the bytes in src
+ * are first copied into a temporary array that does not overlap src or dst,
+ * and the bytes are then copied from the temporary array to dst.
+ *
+ * Copyright (C) 1999  Niibe Yutaka
+ */
+void *memmove_fast(void *dst, const void *src, size_t n);
+
 __END_DECLS
 
 #endif	/* __FAST_FAST_H */
