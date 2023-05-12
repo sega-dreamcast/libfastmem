@@ -66,20 +66,23 @@ and the bytes are then copied from the temporary array to `dst`.
 Copyright (C) 1999  [Niibe Yutaka](http://www.gniibe.org/)
 
 Copyright (c) 2009  [STMicroelectronics Ltd](https://www.st.com)
+
 > Optimized using 64bit data transfer (via FPU) and the `movca.l` inst.
-> Author: Giuseppe Cavallaro <peppe.cavallaro@st.com>
+> Author: [Giuseppe Cavallaro](https://it.linkedin.com/in/giuseppecavallaro)
 
 ### memcpy_fast
 
 Copyright (C) 1999  [Niibe Yutaka](http://www.gniibe.org/)
 
 Copyright (c) 2002  [STMicroelectronics Ltd](https://www.st.com)
+
 > Modified from `memcpy.S` and micro-optimized for SH4
-> Author: Stuart Menefy (stuart.menefy@st.com)
+> Author: [Stuart Menefy](https://uk.linkedin.com/in/stuartmenefy)
 
 Copyright (c) 2009  [STMicroelectronics Ltd](https://www.st.com)
+
 > Optimized using prefetching and 64bit data transfer via FPU
-> Author: Giuseppe Cavallaro (peppe.cavallaro@st.com)
+> Author: [Giuseppe Cavallaro](https://it.linkedin.com/in/giuseppecavallaro)
 
 ### memmove_fast
 
