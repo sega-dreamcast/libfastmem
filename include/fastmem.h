@@ -1,11 +1,11 @@
 /**
-    libfast for KallistiOS ##version##
+    libfastmem for KallistiOS ##version##
 
-    Very optimized set of functions for the Sega Dreamcast
+    Very optimized set of memory manipulation functions for the Sega Dreamcast.
 */
 
-#ifndef __FAST_FAST_H
-#define __FAST_FAST_H
+#ifndef __FASTMEM_FASTMEM_H
+#define __FASTMEM_FASTMEM_H
 
 __BEGIN_DECLS
 
@@ -56,4 +56,4 @@ void *memmove_fast(void *dst, const void *src, size_t n);
 
 __END_DECLS
 
-#endif	/* __FAST_FAST_H */
+#endif	/* __FASTMEM_FASTMEM_H */

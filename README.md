@@ -1,18 +1,21 @@
-# libfast
+# libfastmem
 
-Very optimized set of functions for the Sega Dreamcast.
+Very optimized set of memory manipulation functions for the Sega Dreamcast.
 
 ## Introduction
 
-**libfast** is a tiny library for KallistiOS that provides set of functions that
-are very optimized in terms of speed and/or memory usage. These functions can
-be used in remplacement of standard functions, but keep in mind that all
-functions provided in that library are suffixed with the `_fast` prefix.
+**libfastmem** is a tiny library for [KallistiOS](http://gamedev.allusion.net/softprj/kos/)
+that provides set of functions dedicated to memory manipulation, that are very
+optimized in terms of speed and/or memory. These functions can be used in
+remplacement of standard functions, but keep in mind that all functions provided
+in that library are suffixed with the `_fast` prefix.
 
 This library is intended to be used as a KallistiOS Port (`kos-ports`) but it
 can be used as a KallistiOS add-on as well.
 
 ## Available functions
+
+You need to include `<fastmem/fastmem.h>` in your project.
 
 This library ship 3 functions:
 
@@ -60,31 +63,31 @@ and the bytes are then copied from the temporary array to `dst`.
 
 ### memset_fast
 
-Copyright (C) 1999  Niibe Yutaka
- 
-Copyright (c) 2009  STMicroelectronics Ltd
-* Optimised using 64bit data transfer (via FPU) and the movca.l inst.
-* Author: Giuseppe Cavallaro <peppe.cavallaro@st.com>
+Copyright (C) 1999  [Niibe Yutaka](http://www.gniibe.org/)
+
+Copyright (c) 2009  [STMicroelectronics Ltd](https://www.st.com)
+> Optimized using 64bit data transfer (via FPU) and the `movca.l` inst.
+> Author: Giuseppe Cavallaro <peppe.cavallaro@st.com>
 
 ### memcpy_fast
 
-Copyright (C) 1999  Niibe Yutaka
+Copyright (C) 1999  [Niibe Yutaka](http://www.gniibe.org/)
 
-Copyright (c) 2002  STMicroelectronics Ltd
-* Modified from memcpy.S and micro-optimised for SH4
-* Author: Stuart Menefy <stuart.menefy@st.com>
+Copyright (c) 2002  [STMicroelectronics Ltd](https://www.st.com)
+> Modified from `memcpy.S` and micro-optimized for SH4
+> Author: Stuart Menefy (stuart.menefy@st.com)
 
-Copyright (c) 2009  STMicroelectronics Ltd
-* Optimised using prefetching and 64bit data transfer via FPU
-* Author: Giuseppe Cavallaro <peppe.cavallaro@st.com>
+Copyright (c) 2009  [STMicroelectronics Ltd](https://www.st.com)
+> Optimized using prefetching and 64bit data transfer via FPU
+> Author: Giuseppe Cavallaro (peppe.cavallaro@st.com)
 
 ### memmove_fast
 
-Copyright (C) 1999  Niibe Yutaka
+Copyright (C) 1999  [Niibe Yutaka](http://www.gniibe.org/)
 
 ## About
 
 These functions were intended to be directly merged in KallistiOS patches but
-unfortunately, this couldn't be done due to licensing issue. These functions
-remain very interesting for Sega Dreamcast programming, that's why these were
-published in that library.
+unfortunately, [this couldn't be done due to licensing issue](https://github.com/KallistiOS/KallistiOS/pull/157).
+These functions remain very interesting for Sega Dreamcast programming, that's
+why these were published in that library.
