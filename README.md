@@ -7,8 +7,9 @@ Very optimized set of memory manipulation functions for the Sega Dreamcast.
 **libfastmem** is a tiny library for [KallistiOS](http://gamedev.allusion.net/softprj/kos/)
 that provides set of functions dedicated to memory manipulation, that are very
 optimized in terms of speed and/or memory. These functions can be used in
-remplacement of standard functions, but keep in mind that all functions provided
-in that library are suffixed with the `_fast` prefix.
+remplacement of standard functions provided by [Newlib](https://sourceware.org/newlib/),
+but keep in mind that all functions provided in that library are suffixed
+with the `_fast` prefix.
 
 This library is intended to be used as a KallistiOS Port (`kos-ports`) but it
 can be used as a KallistiOS add-on as well.
