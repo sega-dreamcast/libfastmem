@@ -14,8 +14,3 @@ include $(KOS_BASE)/addons/Makefile.prefab
 create_kos_link:
 	rm -f ../include/fastmem
 	ln -s ../libfastmem/include ../include/fastmem
-	
-# Override the default %.S rule from "Makefile.rules" (we want "kos-cc" instead
-# of "kos-as").
-%.o: %.S
-	kos-cc $< -o $@
