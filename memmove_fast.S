@@ -21,7 +21,7 @@ ENTRY(memmove_fast)
 	jmp	@r0
 	 nop
 	.balign 4
-2:	.long	_memcpy_sh4
+2:	.long	_memcpy_fast
 1:
 	sub	r5,r4		! From here, r4 has the distance to r0
 	tst	r6,r6
