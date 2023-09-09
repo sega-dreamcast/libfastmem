@@ -60,6 +60,15 @@ The memory areas may overlap: copying takes place as though the bytes in `src`
 are first copied into a temporary array that does not overlap `src` or `dst`,
 and the bytes are then copied from the temporary array to `dst`.
 
+## Installation
+
+This library can be installed using 2 ways:
+
+1. Using the `libfastmem` KallistiOS Ports (in `kos-ports`)
+2. Cloning this repository directly in your `${KOS_BASE}/addons` directory.
+In that case you just have to enter this directory and build the library with
+`make`.
+
 ## Credits
 
 ### memset_fast
