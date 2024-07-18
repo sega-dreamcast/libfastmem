@@ -23,13 +23,21 @@
  * FPSCR.SZ=1,FPSCR.SZ=0 is well defined on both SH4-200 and SH4-300.
  * Currenlty it has been only implemented and tested for little endian mode. */
 .macro FPU_SET_PAIRED_PREC
+#if defined(__SH4_SINGLE_ONLY__) || defined(__SH4_SINGLE__)
+	fschg
+#else
 	sts	fpscr, r3
 	mov	#0x10, r1	! PR=0 SZ=1
 	shll16  r1
 	lds	r1, fpscr
+#endif
 .endm
 .macro RESTORE_FPSCR
+#if defined(__SH4_SINGLE_ONLY__) || defined(__SH4_SINGLE__)
+	fschg
+#else
 	lds	r3, fpscr
+#endif
 .endm
 #endif
 
