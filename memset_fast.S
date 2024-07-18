@@ -70,18 +70,16 @@ ENTRY(memset_fast)
 	 mov	r6,r0
 
 	! align the dst to the cache block size if necessary
-	mov	r4, r3
-	mov	#~(0x1f), r1
+	mov	#0x1f, r1
 
-	and	r3, r1
-	cmp/eq	r3, r1
+	and	r4, r1
+	tst	r1, r1
 
 	bt/s	11f		! dst is already aligned
-	 sub	r1, r3		! r3-r1 -> r3
-	shlr2	r3		! number of loops
+	 shlr2	r1		! number of loops
 
 10:	mov.l	r5,@-r4
-	dt	r3
+	dt	r1
 	bf/s	10b
 	 add	#-4, r6
 
